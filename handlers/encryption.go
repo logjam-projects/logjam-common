@@ -6,10 +6,22 @@ import (
 	"crypto/md5"
 	"crypto/rand"
 	"encoding/hex"
+	"github.com/denisbrodbeck/machineid"
+	"github.com/rs/xid"
 	"io"
 	"io/ioutil"
 	"os"
 )
+
+
+
+func GetXidToken() xid.ID {
+	return xid.New()
+}
+
+func GetUniqueMachineID() (string, error) {
+	return machineid.ID()
+}
 
 func DecodeData(token string, data string) string {
 	dataByte := []byte(data)
@@ -24,7 +36,6 @@ func EncodeData(token string, data string) string {
 
 	return string(enc[:])
 }
-
 
 
 func createHash(key string) string {
