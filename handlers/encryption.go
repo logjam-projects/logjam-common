@@ -13,8 +13,6 @@ import (
 	"os"
 )
 
-
-
 func GetXidToken() xid.ID {
 	return xid.New()
 }
