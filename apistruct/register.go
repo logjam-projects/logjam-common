@@ -12,6 +12,6 @@ type RegisterData struct{
 }
 
 type RegDataReturn struct {
-	Token string `json:"token,omitempty"`
+	Token xid.ID `json:"token,omitempty"`
 	EncryptKey xid.ID `json:"encryptKey,omitempty"`
 }
