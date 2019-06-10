@@ -9,3 +9,13 @@ type ReturnJobData struct {
 	ScheduledTime time.Time `json:"scheduledtime,omitempty"`
 	CompletedTime time.Time `json:"completedtime,omitempty"`
 }
+
+type JobDetails struct {
+	Id           string `json:"id,omitempty"`
+	Description  string `json:"description,omitempty"`
+	TaskType     int    `json:"tasktype,omitempty"`
+	TargetWorker string `json:"worker,omitempty"`
+	CreateTime     time.Time `json:"createtime,omitempty"`
+	PulledTime     time.Time `json:"pulledtime,omitempty"`
+	CompletedTime  time.Time `json:"completedtime,omitempty"`
+}
