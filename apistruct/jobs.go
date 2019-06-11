@@ -8,6 +8,7 @@ type ReturnJobData struct {
 	Data   string `json:"data,omitempty"`
 	ScheduledTime time.Time `json:"scheduledtime,omitempty"`
 	CompletedTime time.Time `json:"completedtime,omitempty"`
+	Duration 	  time.Duration `json:"duration,omitempty"`
 }
 
 type JobDetails struct {
