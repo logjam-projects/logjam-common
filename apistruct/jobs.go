@@ -2,6 +2,13 @@ package apistruct
 
 import "time"
 
+type CreateJob struct {
+	TaskType     int      `json:"tasktype,omitempty"`
+	Description  string   `json:"description,omitempty"`
+	TargetWorker string   `json:"worker,omitempty"`
+	TargetTags   []string `json:"tags,omitempty"`
+}
+
 type ReturnJobData struct {
 	Id     string `json:"id,omitempty"`
 	Worker string `json:"worker,omitempty"`
