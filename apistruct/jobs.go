@@ -10,7 +10,7 @@ type CreateJob struct {
 }
 
 type ReturnJobData struct {
-	Id     string `json:"id,omitempty"`
+	JobId     string `json:"jobid,omitempty"`
 	Worker string `json:"worker,omitempty"`
 	Data   string `json:"data,omitempty"`
 	CompletedTime time.Time `json:"completedtime,omitempty"`
@@ -18,7 +18,7 @@ type ReturnJobData struct {
 }
 
 type JobDetails struct {
-	Id           string `json:"id,omitempty"`
+	JobId           string `json:"jobid,omitempty"`
 	Description  string `json:"description,omitempty"`
 	TaskType     int    `json:"tasktype,omitempty"`
 	TargetWorker string `json:"worker,omitempty"`
